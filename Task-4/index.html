@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Authentication</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        #loginPage,
+        #registerPage,
+        #securedPage {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 id="formTitle">Login</h2>
+
+        <div id="loginPage">
+            <input type="text" id="loginUsername" placeholder="Enter Username">
+            <input type="password" id="loginPassword" placeholder="Enter Password">
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="showRegister()">Register here</a></p>
+        </div>
+
+        <div id="registerPage">
+            <input type="text" id="registerUsername" placeholder="Enter Username">
+            <input type="password" id="registerPassword" placeholder="Enter Password">
+            <button onclick="register()">Register</button>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+        </div>
+
+        <div id="securedPage">
+            <h2>Welcome to the Secured Page</h2>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+
+</html>
